@@ -1,0 +1,18 @@
+# config/packages/fos_user.yaml
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    # if you change the class configuration, please also alter the sonata_user.yml file
+    user_class:     App\Application\Sonata\UserBundle\Entity\User
+
+    group:
+        group_class:   App\Application\Sonata\UserBundle\Entity\Group
+        group_manager: sonata.user.orm.group_manager # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
+    service:
+        user_manager: sonata.user.orm.user_manager
+
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"       

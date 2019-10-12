@@ -1,0 +1,8 @@
+sonata_notification:
+    consumers:
+        register_default: false
+    admin:
+        enabled: false
+    backend: sonata.notification.backend.runtime 
+    class:
+        message: App\Application\Sonata\NotificationBundle\Entity\Message    

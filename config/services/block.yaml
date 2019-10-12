@@ -1,0 +1,8 @@
+services:
+    sonata.block.service.rss:
+        class: App\Block\RssBlockService
+        arguments:
+            - ~
+            - '@templating'
+        tags:
+            - { name: sonata.block }

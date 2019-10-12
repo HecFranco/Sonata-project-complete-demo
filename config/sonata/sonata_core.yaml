@@ -1,0 +1,30 @@
+sonata_core:
+    form:
+        mapping:
+            enabled: false
+    ## SERIALIZER        
+    # https://sonata-project.org/bundles/core/3-x/doc/reference/serialization.html
+    serializer:
+        formats: ['json', 'xml', 'yml']
+
+    ## FLASH MESSAGES
+    # https://sonata-project.org/bundles/core/3-x/doc/reference/flash_messages.html
+    flashmessage:
+        success:
+            types:
+                - { type: my_custom_bundle_success, domain: MyCustomBundle }
+                - { type: my_other_bundle_success, domain: MyOtherBundle }
+
+        warning:
+            types:
+                - { type: my_custom_bundle_warning, domain: MyCustomBundle }
+                - { type: my_other_bundle_warning } # if nothing is specified, sets SonataCoreBundle by default
+
+        error:
+            css_class: danger # optionally, a CSS class can be defined
+            types:
+                - { type: my_custom_bundle, domain: MyCustomBundle }
+
+        custom_type: # You can add custom types too
+            types:
+                - { type: custom_bundle_type, domain: MyCustomBundle }            

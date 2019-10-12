@@ -1,0 +1,71 @@
+services:
+
+############ TEST FILEDS
+# https://sonata-project.org/bundles/core/3-x/doc/reference/form_types.html
+# https://symfony.com/doc/master/bundles/SonataAdminBundle/reference/form_types.html
+  admin.test_fields.text_type:
+    class: App\Admin\ProjectAdmin
+    arguments: [~, App\Entity\Project, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: TEXTTYPE, group: TestFields }
+  admin.test_fields.inmutable_array_type:
+    class: App\Admin\PageAdmin
+    arguments: [~, App\Entity\Page, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: IMMUTABLEARRAYTYPE, group: TestFields }
+  admin.test_fields.translatable_choice_type:
+    class: App\Admin\DeliveryAdmin
+    arguments: [~, App\Entity\Delivery, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: TRANSLATABLECHOICETYPE, group: TestFields }      
+  admin.test_fields.boolean_type:
+    class: App\Admin\ProductAdmin
+    arguments: [~, App\Entity\Product, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: BOOLEANTYPE, group: TestFields }       
+  admin.test_fields.choice_type:
+    class: App\Admin\ProductAdmin
+    arguments: [~, App\Entity\Product, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: CHOICETYPE, group: TestFields }   
+  admin.test_fields.collection_type:
+    class: App\Admin\TaskAdmin
+    arguments: [~, App\Entity\Task, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: COLLECTIONTYPE, group: TestFields }    
+  admin.test_fields.collection_type_entity:
+    class: App\Admin\TagAdmin
+    arguments: [~, App\Entity\Tag, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: COLLECTIONTYPE_ENTITY, group: TestFields }                      
+  admin.test_fields.datepicker_type:
+    class: App\Admin\PublicationAdmin
+    arguments: [~, App\Entity\Publication, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: DATEPICKER_TYPE, group: TestFields }  
+  admin.test_fields.entity_type:
+    class: App\Admin\BlogPostEntityAdmin
+    arguments: [~, App\Entity\BlogPost, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: ENTITY_TYPE, group: TestFields } 
+  admin.test_fields.model_type:
+    class: App\Admin\BlogPostAdmin
+    arguments: [~, App\Entity\BlogPost, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: MODEL_TYPE, group: TestFields } 
+  admin.test_fields.autocomplete_type:
+    class: App\Admin\BlogPostAutocompleteAdmin
+    arguments: [~, App\Entity\BlogPost, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: AUTOCOMPLETE_TYPE, group: TestFields }       
+  admin.test_fields.model_type_entity:
+    class: App\Admin\CategoryAdmin
+    arguments: [~, App\Entity\Category, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: MODEL_TYPE_ENTITY, group: TestFields }      
+  admin.test_fields.color_type:
+    class: App\Admin\ColorAdmin
+    arguments: [~, App\Entity\Color, ~]
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: COLOR_TYPE, group: TestFields }            
+     

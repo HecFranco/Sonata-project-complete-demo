@@ -1,0 +1,7 @@
+prodigious_sonata_menu:
+    entities:
+        menu: App\Entity\Menu
+        menu_item: App\Entity\MenuItem
+    admins:
+        menu: App\Admin\MyMenuAdmin
+        menu_item: App\Admin\MyMenuItemAdmin

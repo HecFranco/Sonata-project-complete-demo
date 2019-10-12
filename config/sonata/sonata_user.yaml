@@ -1,0 +1,9 @@
+# config/packages/sonata_user.yaml
+
+sonata_user:
+    security_acl: false
+    manager_type: orm # can be orm or mongodb
+    mailer: sonata.user.mailer.default # Service used to send emails    
+    class:
+        user: App\Application\Sonata\UserBundle\Entity\User
+        group: App\Application\Sonata\UserBundle\Entity\Group    

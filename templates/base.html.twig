@@ -1,0 +1,14 @@
+{% include '@SonataCore/FlashMessage/render.html.twig' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% include '@SonataCore/FlashMessage/render.html.twig' with { domain: 'MyCustomBundle' } %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

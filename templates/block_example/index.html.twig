@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlockExampleController!{% endblock %}
+
+{% block body %}
+    {{ sonata_block_render({ 'type': 'sonata.block.service.rss' }, {
+        'title': 'Sonata Project\'s Feeds',
+        'url': 'https://sonata-project.org/blog/archive.rss'
+    }) }}
+{% endblock %}
